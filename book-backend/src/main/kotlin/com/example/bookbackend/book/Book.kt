@@ -4,9 +4,8 @@ import org.springframework.data.jpa.domain.AbstractPersistable
 import javax.persistence.Entity
 
 @Entity
-class Book(val title: String, val isbn: String) : AbstractPersistable<Long>() {
+class Book(var title: String, var isbn: String) : AbstractPersistable<Long>() {
 
-    constructor() : this("", "") {
-    }
+    constructor() : this("", "")
 
 }

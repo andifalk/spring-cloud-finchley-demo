@@ -6,6 +6,6 @@ import org.springframework.data.mongodb.core.mapping.Document
 import java.util.*
 
 @Document
-data class CustomerDocument(
-        @Id val id: String, val identifier: UUID, val firstName: String,
-        @Indexed val lastName: String)
+class CustomerDocument(
+        @Id var id: String, var identifier: UUID, var firstName: String,
+        @Indexed var lastName: String)

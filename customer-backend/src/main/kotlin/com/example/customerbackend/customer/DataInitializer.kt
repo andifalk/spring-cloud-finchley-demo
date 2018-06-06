@@ -12,7 +12,7 @@ class DataInitializer(val customerRepository: CustomerRepository) : CommandLineR
                 CustomerDocument("1111", UUID.randomUUID(), "Max", "Muster"),
                 CustomerDocument("2222", UUID.randomUUID(), "Hans", "Huber"),
                 CustomerDocument("3333", UUID.randomUUID(), "Steffi", "Baum")
-        ).forEach { customerRepository.save(it) }
+        ).forEach { customerRepository.save(it).subscribe() }
     }
 
 }
