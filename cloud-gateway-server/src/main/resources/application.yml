@@ -1,0 +1,17 @@
+server:
+  port: 8080
+  ssl:
+    key-store: classpath:ssl-certs.jks
+    key-store-password: secret
+    key-password: secret
+    key-alias: server
+    trust-store: classpath:ssl-certs.jks
+    trust-store-password: secret
+  http2:
+    enabled: true
+spring:
+  cloud:
+    gateway:
+      httpclient:
+        ssl:
+          use-insecure-trust-manager: false

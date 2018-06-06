@@ -14,7 +14,7 @@ class RouteConfiguration {
     fun routeLocator(@Autowired builder: RouteLocatorBuilder, @Autowired rewrite: RewritePathGatewayFilterFactory): RouteLocator {
         return builder.routes()
                 .route({
-                    r -> r.host("**localhost:8080**").uri("http://localhost:9090")
+                    r -> r.host("**localhost:8080**").uri("https://localhost:9090")
                 }).build()
     }
 

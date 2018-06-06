@@ -1,2 +1,6 @@
 rootProject.name = 'spring-cloud-finchley-demo'
 
+include 'cloud-gateway-server'
+include 'customer-backend'
+include 'book-backend'
+

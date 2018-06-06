@@ -1,15 +1,9 @@
 server:
-  port: 9090
+  port: 9095
   ssl:
     key-store: classpath:ssl-certs.jks
     key-store-password: secret
     key-password: secret
     key-alias: server
-spring:
-  data:
-    mongodb:
-      port: 10200
-logging:
-  level:
-    org:
-      springframework: info
+  http2:
+    enabled: true
